@@ -1,0 +1,7 @@
+{
+  "name": "ons",
+  "short_name": "ons",
+  "description": "Etherton One Name Study",
+  "start_url": "/",
+  "display": "standalone"
+}
