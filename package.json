@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "name": "EthertonOns",
+  "private": true,
+  "devDependencies": {
+    "express": "^4.16.2"
+  }
+}
