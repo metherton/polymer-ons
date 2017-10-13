@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "EthertonOns",
+  "name": "EthertonPortal",
   "private": true,
   "devDependencies": {
     "express": "^4.16.2"

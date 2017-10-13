@@ -1,0 +1,44 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../../bower_components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../../../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../../../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../../bower_components/iron-flex-layout/iron-flex-layout.html">
+
+<dom-module id="portal-container">
+    <template>
+        <style>
+            app-toolbar {
+                /* Toolbar is the main header, so give it some color */
+                background-color: #000000;
+                font-family: 'Roboto', Helvetica, sans-serif;
+                color: white;
+                --app-toolbar-font-size: 24px;
+            }
+        </style>
+        <app-header>
+            <app-toolbar>
+            </app-toolbar>
+        </app-header>
+    </template>
+
+    <script>
+        /**
+         * @customElement
+         * @polymer
+         */
+        class PortalContainer extends Polymer.Element {
+            static get is() { return 'portal-container'; }
+            static get properties() {
+                return {
+                    prop1: {
+                        type: String,
+                        value: 'portal-container'
+                    }
+                };
+            }
+        }
+        window.customElements.define(PortalContainer.is, PortalContainer);
+    </script>
+</dom-module>

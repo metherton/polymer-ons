@@ -1,0 +1,32 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../../bower_components/paper-toolbar/paper-toolbar.html">
+<link rel="import" href="../../../bower_components/iron-icons/iron-icons.html">
+
+<dom-module id="portal-toolbar">
+    <template>
+        <paper-toolbar>
+            <paper-icon-button src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" style="line-height: 16px" icon="menu"></paper-icon-button>
+            <span slot="top" class="title">Title</span>
+        </paper-toolbar>
+    </template>
+
+    <script>
+        /**
+         * @customElement
+         * @polymer
+         */
+        class PortalToolbar extends Polymer.Element {
+            static get is() { return 'portal-toolbar'; }
+            static get properties() {
+                return {
+                    prop1: {
+                        type: String,
+                        value: 'portal-toolbar'
+                    }
+                };
+            }
+        }
+
+        window.customElements.define(PortalToolbar.is, PortalToolbar);
+    </script>
+</dom-module>
