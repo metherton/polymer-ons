@@ -8,7 +8,7 @@
 <link rel="import" href="../../../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../../../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../../../bower_components/paper-search/paper-search-panel.html">
-
+<link rel="import" href="../portal-home/portal-home.html">
 
 <dom-module id="portal-container">
     <template>
@@ -19,7 +19,6 @@
                 font-family: Arial, Helvetica, freesans, sans-serif;
                 color: white;
                 --app-toolbar-font-size: 24px;
-                height: 40px;
             }
             paper-tabs {
                 --paper-tabs-selection-bar-color: white;
@@ -34,7 +33,7 @@
         </style>
         <app-header>
             <app-toolbar>
-                <paper-tabs no-bar="true" selected="0" style="width: 200px;">
+                <paper-tabs selected="0" style="width: 200px;">
                     <paper-tab>Home</paper-tab>
                     <paper-tab>ONS</paper-tab>
                 </paper-tabs>
@@ -42,6 +41,7 @@
                 <paper-search-bar hide-filter-button="true"></paper-search-bar>
             </app-toolbar>
         </app-header>
+        <portal-home></portal-home>
 
     </template>
 
