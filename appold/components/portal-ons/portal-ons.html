@@ -1,0 +1,46 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../../bower_components/app-grid/app-grid.html">
+<link rel="import" href="../../../bower_components/app-layout/app-grid/app-grid-style.html">
+
+
+<dom-module id="portal-ons">
+    <template>
+        <style include="app-grid-style">
+            .container {
+                background-color: #e7e8e1;
+            }
+            :host {
+                --app-grid-gutter: 15px;
+                /*--app-grid-columns: 3;*/
+                /*--app-grid-expandible-item-columns: 3;*/
+            }
+            /* Only the first item should expand */
+            /*.item:first-child {*/
+                /*@apply --app-grid-expandible-item;*/
+            /*}*/
+        </style>
+
+       ons page
+    </template>
+
+    <script>
+        /**
+         * @customElement
+         * @polymer
+         */
+        class PortalOns extends Polymer.Element {
+            static get is() { return 'portal-ons'; }
+            static get properties() {
+                return {
+                    prop1: {
+                        type: String,
+                        value: 'portal-ons'
+                    }
+                };
+            }
+        }
+
+        window.customElements.define(PortalOns.is, PortalOns);
+    </script>
+</dom-module>
