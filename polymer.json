@@ -1,9 +1,9 @@
 {
   "entrypoint": "index.html",
-  "shell": "src/my-app.html",
+  "shell": "src/portal-container.html",
   "fragments": [
-    "src/my-view1.html",
-    "src/my-view2.html",
+    "src/portal-home.html",
+    "src/portal-ons.html",
     "src/my-view3.html",
     "src/my-view404.html"
   ],
