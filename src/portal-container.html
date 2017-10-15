@@ -22,6 +22,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="../bower_components/paper-tabs/paper-tab.html">
+<link rel="import" href="../bower_components/paper-search/paper-search-panel.html">
 <link rel="import" href="my-icons.html">
 
 <link rel="lazy-import" href="portal-view1.html">
@@ -91,6 +92,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         -moz-outline-style: none
       }
 
+      paper-tabs {
+        --paper-tabs-selection-bar-color: white;
+      }
+
+      paper-tab {
+        color: white;
+        --paper-tab-ink: white;
+      }
+      paper-search-bar {
+        color: #000000;
+      }
     </style>
 
     <app-location
@@ -127,6 +139,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-tab link name="ons"><a href="/ons" tabindex="-1">ONS</a></paper-tab>
             </paper-tabs>
             <div main-title>&nbsp;</div>
+            <paper-search-bar hide-filter-button="true"></paper-search-bar>
           </app-toolbar>
         </app-header>
 
@@ -159,7 +172,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           subroute: String,
           // This shouldn't be neccessary, but the Analyzer isn't picking up
           // Polymer.Element#rootPath
-          rootPath: String,
+          rootPath: String
         };
       }
 
