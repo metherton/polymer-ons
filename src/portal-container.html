@@ -25,8 +25,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/paper-search/paper-search-panel.html">
 <link rel="import" href="my-icons.html">
 
-<link rel="lazy-import" href="portal-view1.html">
-<link rel="lazy-import" href="portal-view2.html">
+<link rel="lazy-import" href="portal-home.html">
+<link rel="lazy-import" href="portal-ons.html">
 <link rel="lazy-import" href="portal-view3.html">
 <link rel="lazy-import" href="portal-view404.html">
 
@@ -84,6 +84,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         height: auto !important;
         font-size: 14px;
         color: white;
+        text-align: center;
       }
 
       .tab-links  a:active, a:focus {
@@ -136,8 +137,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <app-toolbar>
             <!--<paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>-->
             <paper-tabs class="tab-links" selected="[[page]]" attr-for-selected="name" style="width: 200px;">
-              <paper-tab link name="home"><a href="/home" tabindex="-1">Home</a></paper-tab>
-              <paper-tab link name="ons"><a href="/ons" tabindex="-1">ONS</a></paper-tab>
+              <paper-tab link name="home"><a name="home" href="/home" tabindex="-1">Home</a></paper-tab>
+              <paper-tab link name="ons"><a name="ons" href="/ons" tabindex="-1">ONS</a></paper-tab>
             </paper-tabs>
             <div main-title>&nbsp;</div>
             <paper-search-bar hide-filter-button="true"></paper-search-bar>
@@ -147,11 +148,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <iron-pages
             selected="[[page]]"
             attr-for-selected="name"
-            fallback-selection="view404"
+            fallback-selection="home"
             role="main">
-          <portal-view1 name="view1"></portal-view1>
-          <portal-view2 name="view2"></portal-view2>
-          <portal-view3 name="view3"></portal-view3>
+          <portal-home name="home"></portal-home>
+          <portal-ons name="ons"></portal-ons>
+          <!--<portal-view3 name="view3"></portal-view3>-->
           <portal-view404 name="view404"></portal-view404>
         </iron-pages>
       </app-header-layout>
@@ -200,12 +201,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         Polymer.importHref(
             resolvedPageUrl,
             null,
-            this._showPage404.bind(this),
+            this._showPageHome.bind(this),
             true);
       }
 
-      _showPage404() {
-        this.page = 'view404';
+      _showPageHome() {
+        this.page = 'home';
       }
     }
 
