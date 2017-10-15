@@ -31,6 +31,7 @@
                 color: #000000;
             }
         </style>
+
         <app-header>
             <app-toolbar>
                 <paper-tabs selected="0" style="width: 200px;">
@@ -41,6 +42,21 @@
                 <paper-search-bar hide-filter-button="true"></paper-search-bar>
             </app-toolbar>
         </app-header>
+
+        <app-location route="{{route}}"></app-location>
+        <app-route
+                route="{{route}}"
+                pattern="/:view"
+                data="{{routeData}}"
+                tail="{{subroute}}">
+
+        </app-route>
+        <iron-pages selected="[[routeData.view]]" attr-for-selected="name">
+            <my-profile-view name="profile" route="{{subroute}}"></my-profile-view>
+            <my-message-list-view name="messages" route="{{subroute}}"></my-message-list-view>
+            <my-detail-view name="detail" route="{{subroute}}"></my-detail-view>
+        </iron-pages>
+
         <portal-home></portal-home>
 
     </template>
